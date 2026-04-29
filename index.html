@@ -67,12 +67,15 @@ section{padding:120px 0}
 /* Creators */
 .creators{background:#0d0d12}
 .creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.creator-card{background:#111;border:1px solid #1a1a1a;padding:36px;transition:border-color .3s}
+.creator-card{background:#111;border:1px solid #1a1a1a;overflow:hidden;transition:border-color .3s}
 .creator-card:hover{border-color:#333}
-.creator-tag{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#d4af37;margin-bottom:12px}
-.creator-name{font-size:20px;color:#f0f0e8;margin-bottom:4px}
-.creator-handle{font-size:14px;color:#555;margin-bottom:16px}
-.creator-desc{font-size:15px;color:#777;line-height:1.6}
+.creator-image{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(30%);transition:filter .3s}
+.creator-card:hover .creator-image{filter:grayscale(0)}
+.creator-info{padding:28px}
+.creator-tag{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#d4af37;margin-bottom:10px}
+.creator-name{font-size:20px;color:#f0f0e8;margin-bottom:6px}
+.creator-handle{font-size:13px;color:#555;margin-bottom:14px}
+.creator-desc{font-size:14px;color:#777;line-height:1.6}
 
 /* Services */
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -208,6 +211,9 @@ section{padding:80px 0}
           <p class="title">Founder &amp; Managing Director</p>
           <p>Former marketing executive at <em>Philips China</em> and <em>BeiTai Kitchen</em>. Founded Qdor Communications in 2016, pioneering food influencer representation in China. Interviewed by <em>China Cuisine</em> association for industry leadership.</p>
         </div>
+        <div style="margin-top:24px">
+          <img src="images/production-set.jpg" alt="Production set" style="width:100%;border-radius:4px;opacity:.8">
+        </div>
       </div>
     </div>
   </div>
@@ -223,46 +229,65 @@ section{padding:80px 0}
     </div>
     <div class="creator-grid">
       <div class="creator-card">
-        <p class="creator-tag">Food &amp; Lifestyle</p>
-        <h3 class="creator-name">Hi Xiaobaojun</h3>
-        <p class="creator-handle">2.4M+ Weibo</p>
-        <p class="creator-desc">Celebrity chef and television personality. Brand ambassador for luxury hospitality and premium F&amp;B brands.</p>
+        <img src="images/kol-xiaobaojun.jpg" alt="Hi Xiaobaojun" class="creator-image">
+        <div class="creator-info">
+          <p class="creator-tag">Food &amp; Lifestyle</p>
+          <h3 class="creator-name">Hi Xiaobaojun</h3>
+          <p class="creator-handle">2.4M+ Weibo</p>
+          <p class="creator-desc">Celebrity chef and television personality. Brand ambassador for luxury hospitality and premium F&amp;B brands.</p>
+        </div>
       </div>
       <div class="creator-card">
-        <p class="creator-tag">Food &amp; Travel</p>
-        <h3 class="creator-name">Wayne</h3>
-        <p class="creator-handle">ZaoYangFanShu &middot; 1M+ WeChat</p>
-        <p class="creator-desc">Self-taught chef transforming everyday ingredients into extraordinary culinary experiences through visual storytelling.</p>
+        <img src="images/kol-wayne.jpg" alt="Wayne" class="creator-image">
+        <div class="creator-info">
+          <p class="creator-tag">Food &amp; Travel</p>
+          <h3 class="creator-name">Wayne</h3>
+          <p class="creator-handle">ZaoYangFanShu &middot; 1M+ WeChat</p>
+          <p class="creator-desc">Self-taught chef transforming everyday ingredients into extraordinary culinary experiences through visual storytelling.</p>
+        </div>
       </div>
       <div class="creator-card">
-        <p class="creator-tag">Travel</p>
-        <h3 class="creator-name">NaLu Diaries</h3>
-        <p class="creator-handle">1.66M+ Weibo</p>
-        <p class="creator-desc">Top 10 Travel Influencer 2021. Documented 30+ countries in partnership with global tourism boards.</p>
+        <img src="images/kol-nalu.jpg" alt="NaLu Diaries" class="creator-image">
+        <div class="creator-info">
+          <p class="creator-tag">Travel</p>
+          <h3 class="creator-name">NaLu Diaries</h3>
+          <p class="creator-handle">1.66M+ Weibo</p>
+          <p class="creator-desc">Top 10 Travel Influencer 2021. Documented 30+ countries in partnership with global tourism boards.</p>
+        </div>
       </div>
       <div class="creator-card">
-        <p class="creator-tag">Luxury Lifestyle</p>
-        <h3 class="creator-name">LengGao</h3>
-        <p class="creator-handle">2M+ Weibo &middot; 70K+ WeChat</p>
-        <p class="creator-desc">Eight years as fashion editor turned luxury lifestyle content creator with a distinctive visual aesthetic.</p>
+        <img src="images/kol-lenggao.jpg" alt="LengGao" class="creator-image">
+        <div class="creator-info">
+          <p class="creator-tag">Luxury Lifestyle</p>
+          <h3 class="creator-name">LengGao</h3>
+          <p class="creator-handle">2M+ Weibo &middot; 70K+ WeChat</p>
+          <p class="creator-desc">Eight years as fashion editor turned luxury lifestyle content creator with a distinctive visual aesthetic.</p>
+        </div>
       </div>
       <div class="creator-card">
-        <p class="creator-tag">Film &amp; Lifestyle</p>
-        <h3 class="creator-name">Left Wind Horse</h3>
-        <p class="creator-handle">Director</p>
-        <p class="creator-desc">Director and premium lifestyle creator. Cannes Film Festival debut. Produces cinematic brand content for luxury clients.</p>
+        <img src="images/kol-leftwind.jpg" alt="Left Wind Horse" class="creator-image">
+        <div class="creator-info">
+          <p class="creator-tag">Film &amp; Lifestyle</p>
+          <h3 class="creator-name">Left Wind Horse</h3>
+          <p class="creator-handle">Director</p>
+          <p class="creator-desc">Director and premium lifestyle creator. Cannes Film Festival debut. Produces cinematic brand content for luxury clients.</p>
+        </div>
       </div>
       <div class="creator-card">
-        <p class="creator-tag">Food Media</p>
-        <h3 class="creator-name">MadahuiChi</h3>
-        <p class="creator-handle">What&apos;s Worth Eating &middot; 1M+</p>
-        <p class="creator-desc">Head of China's leading food media platform. 400+ brand partnerships with consistent viral engagement.</p>
+        <img src="images/kol-madahui.jpg" alt="MadahuiChi" class="creator-image">
+        <div class="creator-info">
+          <p class="creator-tag">Food Media</p>
+          <h3 class="creator-name">MadahuiChi</h3>
+          <p class="creator-handle">What&apos;s Worth Eating &middot; 1M+</p>
+          <p class="creator-desc">Head of China&apos;s leading food media platform. 400+ brand partnerships with consistent viral engagement.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Services -->
+
 <section id="services">
   <div class="container">
     <div class="section-header">
@@ -429,6 +454,10 @@ section{padding:80px 0}
       <div class="contact-info">
         <h2>Start a Conversation</h2>
         <p>Ready to amplify your brand through China's most influential creators? We work with select partners on impactful campaigns.</p>
+        <div class="contact-detail">
+          <p class="label">Offices</p>
+          <p class="value">Shanghai / New York</p>
+        </div>
         <div class="contact-detail">
           <p class="label">Contact</p>
           <p class="value">Peggy Gong, Managing Director</p>
