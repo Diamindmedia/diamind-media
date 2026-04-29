@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIAMIND MEDIA INC | Leading KOL Management Agency</title>
+<meta name="description" content="Shanghai-based influencer management agency specializing in food, fashion & lifestyle. 65M+ followers across China's top social platforms.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#faf8f5;color:#1a1a2e;line-height:1.6}
+html{scroll-behavior:smooth}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{background:#1a1a2e;color:#fff;min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);opacity:.95}
+.hero-content{position:relative;z-index:1;padding:80px 0}
+.hero-label{color:#c9a96e;text-transform:uppercase;letter-spacing:3px;font-size:14px;margin-bottom:24px}
+.hero h1{font-size:clamp(48px,8vw,80px);font-weight:800;line-height:1.1;margin-bottom:32px}
+.hero h1 span{color:#c9a96e}
+.hero p{font-size:clamp(18px,2.5vw,24px);color:#ccc;max-width:600px;margin-bottom:40px;line-height:1.6}
+.btn{display:inline-block;padding:16px 32px;border-radius:8px;font-weight:600;text-decoration:none;transition:all .3s;margin-right:16px;margin-bottom:12px}
+.btn-primary{background:#e94560;color:#fff}
+.btn-primary:hover{background:#d63d54}
+.btn-outline{border:2px solid #c9a96e;color:#c9a96e}
+.btn-outline:hover{background:#c9a96e;color:#1a1a2e}
+
+/* Stats */
+.stats{padding:80px 0;background:#f5f0e8}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;text-align:center}
+.stat-number{font-size:clamp(36px,5vw,56px);font-weight:800;color:#e94560}
+.stat-label{color:#666;margin-top:8px}
+
+/* Sections */
+section{padding:80px 0}
+.section-label{color:#c9a96e;text-transform:uppercase;letter-spacing:3px;font-size:14px;margin-bottom:16px}
+.section-title{font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:48px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:40px}}
+.about-text p{color:#666;margin-bottom:16px;line-height:1.7}
+.about-card{background:#f5f0e8;padding:32px;border-radius:16px}
+.about-card h3{font-size:20px;margin-bottom:16px}
+.about-card p{color:#666;line-height:1.7}
+
+/* Creators */
+.creators{background:#f5f0e8}
+.creators-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.creator-card{background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:box-shadow .3s}
+.creator-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.creator-tag{color:#e94560;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.creator-name{font-size:20px;font-weight:700;margin-bottom:4px}
+.creator-followers{color:#c9a96e;font-size:14px;margin-bottom:12px}
+.creator-desc{color:#666;font-size:14px;line-height:1.6}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+.service-card{background:#f5f0e8;padding:32px;border-radius:16px}
+.service-icon{width:48px;height:48px;background:#e94560;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+.service-card h3{font-size:20px;margin-bottom:16px}
+.service-card ul{list-style:none;color:#666;font-size:14px;line-height:2}
+
+/* Brands */
+.brands{background:#1a1a2e;color:#fff}
+.brands-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
+.brand-item{background:#16213e;padding:12px 16px;border-radius:8px;text-align:center;font-size:14px;color:#aaa;transition:color .3s}
+.brand-item:hover{color:#c9a96e}
+
+/* Contact */
+.contact{background:#f5f0e8;text-align:center}
+.contact-card{background:#fff;padding:40px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);display:inline-block;text-align:left;max-width:400px;width:100%}
+.contact-item{margin-bottom:24px}
+.contact-item:last-child{margin-bottom:0}
+.contact-item-label{font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.contact-item-value{font-size:18px;font-weight:600}
+
+/* Footer */
+footer{background:#1a1a2e;color:#fff;padding:40px 0}
+.footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-brand{font-size:24px;font-weight:700}
+.footer-copy{color:#666;font-size:14px}
+
+.center{text-align:center}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-content">
+    <p class="hero-label">Shanghai &middot; Since 2017</p>
+    <h1>DIAMIND<br><span>MEDIA INC</span></h1>
+    <p>China's leading influencer management agency. We bridge brands and creators across food, fashion, and lifestyle &mdash; turning content into commerce.</p>
+    <div>
+      <a href="#contact" class="btn btn-primary">Work With Us</a>
+      <a href="#about" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div><div class="stat-number">65M+</div><div class="stat-label">Follower Reach</div></div>
+      <div><div class="stat-number">8</div><div class="stat-label">Exclusive Creators</div></div>
+      <div><div class="stat-number">20+</div><div class="stat-label">Partner Creators</div></div>
+      <div><div class="stat-number">7+</div><div class="stat-label">Years Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">About Us</p>
+        <h2 class="section-title">Where Content Meets Commerce</h2>
+        <p>Founded in 2017 in Shanghai, DIAMIND MEDIA is a premier influencer management agency specializing in food, fashion, and lifestyle content creators across China's top social platforms &mdash; Weibo, WeChat, Xiaohongshu, Douyin, and Bilibili.</p>
+        <p>We represent 8 exclusive top-tier creators with a combined reach of over 65 million followers, and maintain partnerships with 20+ additional creators in the industry.</p>
+        <p>Our founder Peggy Gong is recognized as a pioneer in food influencer management, having shaped the industry's commercial landscape since its early days.</p>
+      </div>
+      <div class="about-card">
+        <h3>Peggy Gong &mdash; Founder &amp; Managing Director</h3>
+        <p>Former Philips China and <em>BeiTai Kitchen</em> marketing executive. Founded Qdor Communications in 2016, pioneering food influencer representation in China. Interviewed by <em>China Cuisine</em> association. Now leading DIAMIND MEDIA to connect brands with creators at scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Creators -->
+<section id="creators" class="creators">
+  <div class="container">
+    <p class="section-label center">Our Creators</p>
+    <h2 class="section-title center">Exclusive Talent Roster</h2>
+    <p style="text-align:center;color:#666;max-width:600px;margin:-32px auto 48px">8 exclusive signed creators + 20 long-term partners. Reach 65M+ followers across China's major social platforms.</p>
+    <div class="creators-grid">
+      <div class="creator-card">
+        <p class="creator-tag">Food &amp; Lifestyle</p>
+        <h3 class="creator-name">Hi Xiaobaojun</h3>
+        <p class="creator-followers">2.4M+ Weibo</p>
+        <p class="creator-desc">Celebrity chef, TV personality, and brand ambassador for luxury and F&amp;B brands.</p>
+      </div>
+      <div class="creator-card">
+        <p class="creator-tag">Food &amp; Travel</p>
+        <h3 class="creator-name">Wayne (ZaoYangFanShu)</h3>
+        <p class="creator-followers">1M+ WeChat</p>
+        <p class="creator-desc">Self-taught chef transforming everyday ingredients into extraordinary dishes.</p>
+      </div>
+      <div class="creator-card">
+        <p class="creator-tag">Travel</p>
+        <h3 class="creator-name">NaLu Diaries</h3>
+        <p class="creator-followers">1.66M+ Weibo</p>
+        <p class="creator-desc">Top 10 Travel Influencer 2021. Visited 30+ countries. #womanpower advocate.</p>
+      </div>
+      <div class="creator-card">
+        <p class="creator-tag">Luxury Lifestyle</p>
+        <h3 class="creator-name">LengGao</h3>
+        <p class="creator-followers">2M+ Weibo</p>
+        <p class="creator-desc">Fashion editor turned luxury lifestyle vlogger. 70K+ WeChat subscribers.</p>
+      </div>
+      <div class="creator-card">
+        <p class="creator-tag">Film &amp; Lifestyle</p>
+        <h3 class="creator-name">Left Wind Horse</h3>
+        <p class="creator-followers">Director</p>
+        <p class="creator-desc">Director and premium lifestyle creator. Cannes Film Festival red carpet debut.</p>
+      </div>
+      <div class="creator-card">
+        <p class="creator-tag">Food Media</p>
+        <h3 class="creator-name">MadahuiChi</h3>
+        <p class="creator-followers">1M+</p>
+        <p class="creator-desc">Head of "What's Worth Eating" &mdash; 400+ brand partnerships, viral 100K+ articles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <p class="section-label center">What We Do</p>
+    <h2 class="section-title center">Full-Service Creator Economy</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">&#127909;</div>
+        <h3>Content Production</h3>
+        <ul>
+          <li>&bull; Food styling &amp; photography</li>
+          <li>&bull; Video production &amp; editing</li>
+          <li>&bull; Custom print &amp; digital assets</li>
+          <li>&bull; Live streaming production</li>
+          <li>&bull; H5 interactive campaigns</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128202;</div>
+        <h3>Brand Strategy</h3>
+        <ul>
+          <li>&bull; Brand naming &amp; identity design</li>
+          <li>&bull; Marketing campaign planning</li>
+          <li>&bull; VI system &amp; packaging design</li>
+          <li>&bull; Exhibition &amp; event design</li>
+          <li>&bull; Integrated brand communications</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#129309;</div>
+        <h3>Talent Management</h3>
+        <ul>
+          <li>&bull; KOL planning &amp; content marketing</li>
+          <li>&bull; TV show guest appearances</li>
+          <li>&bull; Book publishing</li>
+          <li>&bull; Brand endorsement deals</li>
+          <li>&bull; Self-operated channel growth</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands -->
+<section id="brands" class="brands">
+  <div class="container">
+    <p class="section-label center">Partners</p>
+    <h2 class="section-title center">Brands We've Worked With</h2>
+    <p style="text-align:center;color:#aaa;max-width:600px;margin:-32px auto 48px">Long-term partnerships across F&amp;B, appliances, fashion, automotive, and tourism sectors.</p>
+    <div class="brands-grid">
+      <div class="brand-item">Hennessy</div>
+      <div class="brand-item">R&eacute;my Martin</div>
+      <div class="brand-item">McDonald's</div>
+      <div class="brand-item">KFC</div>
+      <div class="brand-item">Starbucks</div>
+      <div class="brand-item">Nestl&eacute;</div>
+      <div class="brand-item">Coca-Cola</div>
+      <div class="brand-item">Budweiser</div>
+      <div class="brand-item">GODIVA</div>
+      <div class="brand-item">Kangshifu</div>
+      <div class="brand-item">Philips</div>
+      <div class="brand-item">Siemens</div>
+      <div class="brand-item">Miele</div>
+      <div class="brand-item">KitchenAid</div>
+      <div class="brand-item">De'Longhi</div>
+      <div class="brand-item">BOSS</div>
+      <div class="brand-item">Aigle</div>
+      <div class="brand-item">Canada Goose</div>
+      <div class="brand-item">Burberry</div>
+      <div class="brand-item">Nike</div>
+      <div class="brand-item">adidas</div>
+      <div class="brand-item">Puma</div>
+      <div class="brand-item">New Balance</div>
+      <div class="brand-item">Li-Ning</div>
+      <div class="brand-item">HUAWEI</div>
+      <div class="brand-item">vivo</div>
+      <div class="brand-item">OPPO</div>
+      <div class="brand-item">Mercedes-Benz</div>
+      <div class="brand-item">BMW</div>
+      <div class="brand-item">Volvo</div>
+      <div class="brand-item">Airbnb</div>
+      <div class="brand-item">Google</div>
+      <div class="brand-item">Alibaba</div>
+      <div class="brand-item">Suning</div>
+      <div class="brand-item">Meituan</div>
+      <div class="brand-item">Michelin Guide</div>
+      <div class="brand-item">Tourism Australia</div>
+      <div class="brand-item">Florida Tourism</div>
+      <div class="brand-item">Victoria Tourism</div>
+      <div class="brand-item">Dubai Tourism</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Let's Create Together</h2>
+    <p style="color:#666;max-width:500px;margin:0 auto 40px">Ready to amplify your brand through China's top creators? Reach out to discuss partnerships, campaigns, and collaborations.</p>
+    <div class="contact-card">
+      <div class="contact-item">
+        <p class="contact-item-label">Contact Person</p>
+        <p class="contact-item-value">Peggy Gong</p>
+      </div>
+      <div class="contact-item">
+        <p class="contact-item-label">Phone</p>
+        <p class="contact-item-value">+86 137 0165 3024</p>
+      </div>
+      <div class="contact-item">
+        <p class="contact-item-label">Email</p>
+        <p class="contact-item-value">358883748@qq.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container footer-content">
+    <div>
+      <p class="footer-brand">DIAMIND MEDIA INC</p>
+      <p style="color:#888;font-size:14px">Shanghai &middot; Since 2017</p>
+    </div>
+    <p class="footer-copy">&copy; 2024 DIAMIND MEDIA INC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
