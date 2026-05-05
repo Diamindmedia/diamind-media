@@ -1,8 +1,0 @@
-{
-  "name": "diamind-media",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "mkdir -p dist && cp -r images dist/ && cp index.html dist/index.html && cp -r images dist/"
-  }
-}
