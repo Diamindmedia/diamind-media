@@ -1,497 +1,985 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIAMIND MEDIA INC | Leading KOL Management Agency</title>
-<meta name="description" content="Shanghai-based influencer management agency specializing in food, fashion & lifestyle. 65M+ followers across China's top social platforms.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e8e8e0;line-height:1.6}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAMIND MEDIA INC | Cross-Border Digital Marketing & Influencer Management</title>
+    <meta name="description" content="DIAMIND MEDIA INC - Advanced digital marketing and influencer-based advertising solutions connecting US brands with China's digital ecosystem.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #141414;
+            --text-primary: #f5f5f5;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent: #c9a96e;
+            --accent-hover: #d4b87a;
+            --border: #222222;
+            --border-light: #333333;
+        }
 
-/* Typography */
-h1,h2,h3,h4{font-weight:600;letter-spacing:-0.02em}
-p{color:#a0a0a0}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container{max-width:1200px;margin:0 auto;padding:0 48px}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Navigation */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;transition:background .3s}
-nav.scrolled{background:rgba(10,10,15,.9);backdrop-filter:blur(20px)}
-.logo{font-size:20px;font-weight:700;letter-spacing:2px;color:#d4af37}
-.nav-links{display:flex;gap:40px;list-style:none}
-.nav-links a{color:#888;text-decoration:none;font-size:14px;transition:color .3s;text-transform:uppercase;letter-spacing:1px}
-.nav-links a:hover{color:#d4af37}
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-/* Hero */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url('images/hero-bg.jpg') center center/cover no-repeat;z-index:0}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,15,.92) 0%,rgba(10,10,15,.75) 50%,rgba(10,10,15,.9) 100%);z-index:1}
-.hero-content{position:relative;z-index:2;padding:160px 0 80px}
-.hero-label{font-size:12px;text-transform:uppercase;letter-spacing:4px;color:#d4af37;margin-bottom:32px}
-.hero h1{font-size:clamp(56px,10vw,96px);font-weight:700;line-height:.95;margin-bottom:40px;color:#f0f0e8}
-.hero h1 .gold{color:#d4af37;font-weight:300}
-.hero-subtitle{font-size:clamp(18px,2.5vw,22px);color:#999;max-width:560px;margin-bottom:48px;line-height:1.7}
-.hero-cta{display:flex;gap:20px;flex-wrap:wrap}
-.btn{display:inline-block;padding:16px 40px;font-size:14px;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
-.btn-primary{background:#d4af37;color:#0a0a0f}
-.btn-primary:hover{background:#e8c55a}
-.btn-outline{border:1px solid #444;color:#888}
-.btn-outline:hover{border-color:#d4af37;color:#d4af37}
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 48px;
+        }
 
-/* Section styling */
-section{padding:120px 0}
-.section-header{margin-bottom:80px}
-.section-label{font-size:11px;text-transform:uppercase;letter-spacing:4px;color:#d4af37;margin-bottom:16px}
-.section-title{font-size:clamp(32px,5vw,48px);color:#f0f0e8;margin-bottom:20px}
-.section-desc{font-size:18px;color:#777;max-width:600px}
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
 
-/* Stats bar */
-.stats-bar{background:#111;padding:60px 0;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
-.stat-item{text-align:center}
-.stat-number{font-size:clamp(36px,4vw,56px);font-weight:700;color:#d4af37;line-height:1}
-.stat-label{font-size:13px;color:#666;text-transform:uppercase;letter-spacing:2px;margin-top:12px}
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
 
-/* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.about-text{font-size:17px;line-height:1.8;color:#aaa}
-.about-text p{margin-bottom:24px}
-.about-founder{background:#111;border:1px solid #1a1a1a;padding:48px}
-.about-founder h3{font-size:22px;color:#f0f0e8;margin-bottom:8px}
-.about-founder .title{font-size:14px;color:#666;text-transform:uppercase;letter-spacing:2px;margin-bottom:24px}
-.about-founder p{color:#888;line-height:1.8}
-.about-founder em{color:#d4af37;font-style:normal}
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
 
-/* Creators */
-.creators{background:#0d0d12}
-.creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.creator-card{background:#111;border:1px solid #1a1a1a;overflow:hidden;transition:border-color .3s}
-.creator-card:hover{border-color:#333}
-.creator-image{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(30%);transition:filter .3s}
-.creator-card:hover .creator-image{filter:grayscale(0)}
-.creator-info{padding:28px}
-.creator-tag{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#d4af37;margin-bottom:10px}
-.creator-name{font-size:20px;color:#f0f0e8;margin-bottom:6px}
-.creator-handle{font-size:13px;color:#555;margin-bottom:14px}
-.creator-desc{font-size:14px;color:#777;line-height:1.6}
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
 
-/* Services */
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{background:#111;border:1px solid #1a1a1a;padding:48px;transition:border-color .3s}
-.service-card:hover{border-color:#333}
-.service-num{font-size:12px;color:#d4af37;margin-bottom:20px;letter-spacing:2px}
-.service-card h3{font-size:22px;color:#f0f0e8;margin-bottom:24px}
-.service-card ul{list-style:none}
-.service-card li{color:#777;font-size:15px;padding:8px 0;border-bottom:1px solid #1a1a1a}
-.service-card li:last-child{border-bottom:none}
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
 
-/* Brands */
-.brands{background:#0d0d12}
-.brand-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.brand-item{background:#111;border:1px solid #1a1a1a;padding:20px 16px;text-align:center;font-size:13px;color:#555;transition:all .3s}
-.brand-item:hover{border-color:#333;color:#888}
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
 
-/* Video showcase */
-.video-section{background:#0a0a0f;padding:120px 0}
-.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:60px}
-.video-card{position:relative;background:#111;border:1px solid #1a1a1a;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
-.video-card img{width:100%;height:100%;object-fit:cover;opacity:.6;transition:opacity .3s}
-.video-card:hover img{opacity:.8}
-.video-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
-.play-btn{width:64px;height:64px;border:2px solid #d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;background:rgba(0,0,0,.5)}
-.play-btn:hover{background:#d4af37}
-.play-btn:hover svg{fill:#0a0a0f}
-.play-btn svg{width:20px;height:20px;fill:#d4af37;margin-left:4px}
-.video-title{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(transparent,rgba(0,0,0,.8))}
-.video-title h4{font-size:16px;color:#f0f0e8;margin-bottom:4px}
-.video-title p{font-size:13px;color:#666}
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-/* Contact */
-.contact-section{background:#0d0d12}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.contact-info h2{font-size:42px;color:#f0f0e8;margin-bottom:24px}
-.contact-info>p{color:#777;font-size:18px;margin-bottom:48px}
-.contact-detail{margin-bottom:32px}
-.contact-detail .label{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#555;margin-bottom:8px}
-.contact-detail .value{font-size:20px;color:#f0f0e8}
-.contact-detail .value a{color:#d4af37;text-decoration:none}
-.contact-detail .value a:hover{text-decoration:underline}
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 120px 48px 80px;
+            overflow: hidden;
+        }
 
-/* Footer */
-footer{background:#0a0a0f;padding:48px 0;border-top:1px solid #1a1a1a}
-.footer-content{display:flex;justify-content:space-between;align-items:center}
-.footer-brand{font-size:16px;font-weight:600;letter-spacing:2px;color:#f0f0e8}
-.footer-brand span{color:#d4af37}
-.footer-copy{font-size:13px;color:#444}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(201, 169, 110, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
 
-/* Responsive */
-@media(max-width:900px){
-.container{padding:0 24px}
-nav{padding:20px 24px}
-.nav-links{display:none}
-.stats-grid{grid-template-columns:repeat(2,1fr);gap:32px}
-.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
-.creator-grid,.service-grid{grid-template-columns:1fr}
-.brand-grid{grid-template-columns:repeat(3,1fr)}
-.video-grid{grid-template-columns:1fr}
-section{padding:80px 0}
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        .hero-abstract {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-abstract img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-primary);
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border-color: var(--border-light);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-primary);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-item {
+            background: var(--bg-primary);
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 48px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-text strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 40px;
+        }
+
+        .team-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .team-card .role {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .team-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .team-card .divider {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            margin: 20px 0;
+        }
+
+        /* Talent */
+        .talent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .talent-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .talent-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-light);
+        }
+
+        .talent-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: var(--bg-secondary);
+        }
+
+        .talent-info {
+            padding: 24px;
+        }
+
+        .talent-category {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .talent-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .talent-platform {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .service-item {
+            background: var(--bg-primary);
+            padding: 48px 40px;
+        }
+
+        .service-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 300;
+            color: var(--accent);
+            opacity: 0.4;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .service-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Work */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .work-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .work-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .work-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        }
+
+        .work-category {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .work-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+        }
+
+        /* Clients */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .client-item {
+            background: var(--bg-primary);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .client-item:hover {
+            color: var(--text-primary);
+            background: var(--bg-card);
+        }
+
+        /* Quote */
+        .quote-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 100px 48px;
+            text-align: center;
+        }
+
+        .quote-section blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 400;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 32px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .quote-author strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+
+        .contact-item {
+            margin-bottom: 24px;
+        }
+
+        .contact-item .label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .contact-item .value {
+            font-size: 15px;
+            color: var(--text-primary);
+        }
+
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .offices {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .office-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 28px;
+        }
+
+        .office-card h4 {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .office-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .clients-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 24px;
+            }
+            .nav-links {
+                display: none;
+            }
+            section {
+                padding: 80px 24px;
+            }
+            .hero {
+                padding: 100px 24px 60px;
+            }
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .offices {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav id="nav">
-  <div class="logo">DIAMIND</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#creators">Creators</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">DIAMIND</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#talent">Creators</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="container hero-content">
-    <p class="hero-label">Shanghai &middot; Est. 2017</p>
-    <h1>DIAMIND<br><span class="gold">MEDIA</span></h1>
-    <p class="hero-subtitle">China's leading influencer management agency. We bridge premium brands with top-tier creators across food, fashion, and lifestyle.</p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Start a Project</a>
-      <a href="#work" class="btn btn-outline">View Our Work</a>
-    </div>
-  </div>
-</section>
+    <section class="hero">
+        <div class="hero-abstract">
+            <img src="images/image2.png" alt="">
+        </div>
+        <div class="hero-content">
+            <div class="hero-label">New York / Shanghai / Est. 2017</div>
+            <h1>DIAMIND<br><span>MEDIA</span></h1>
+            <p>Bridging premium brands with top-tier creators across US and China's leading social platforms through advanced digital marketing and influencer advertising solutions.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Start a Project</a>
+                <a href="#work" class="btn btn-secondary">View Our Work</a>
+            </div>
+        </div>
+    </section>
 
-<!-- Stats -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">65M+</div>
-        <div class="stat-label">Total Reach</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">8</div>
-        <div class="stat-label">Exclusive Talent</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">20+</div>
-        <div class="stat-label">Partners</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">7+</div>
-        <div class="stat-label">Years Active</div>
-      </div>
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">65M+</div>
+            <div class="stat-label">Total Reach</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Exclusive Talent</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Brand Partners</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">7+</div>
+            <div class="stat-label">Years Active</div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- About -->
-<section id="about">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-label">About Us</p>
-      <h2 class="section-title">Where Content Meets Commerce</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Founded in 2017 in Shanghai, DIAMIND MEDIA is a premier influencer management agency specializing in food, fashion, and lifestyle content creators across China's leading social platforms.</p>
-        <p>We represent eight exclusive top-tier creators with a combined reach exceeding 65 million followers, alongside partnerships with over twenty additional industry talents.</p>
-        <p>Our approach combines strategic brand positioning with authentic creator storytelling, delivering campaigns that drive measurable business outcomes for global and domestic brands alike.</p>
-      </div>
-      <div>
-        <div class="about-founder">
-          <h3>Peggy Gong</h3>
-          <p class="title">Founder &amp; Managing Director</p>
-          <p>Former marketing executive at <em>Philips China</em> and <em>BeiTai Kitchen</em>. Founded Qdor Communications in 2016, pioneering food influencer representation in China. Interviewed by <em>China Cuisine</em> association for industry leadership.</p>
+    <section id="about">
+        <div class="section-header">
+            <div class="section-label">About Us</div>
+            <h2 class="section-title">Where Content Meets Commerce</h2>
+            <p class="section-subtitle">Cross-border digital marketing connecting US brands with China's creator economy.</p>
         </div>
-        <div style="margin-top:24px">
-          <img src="images/production-set.jpg" alt="Production set" style="width:100%;border-radius:4px;opacity:.8">
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Founded in 2017, <strong>DIAMIND MEDIA INC</strong> is a premier digital marketing and influencer advertising agency, incorporated in New York and operating across the US and China.</p>
+                <p>We specialize in connecting US businesses with China's vibrant digital ecosystem through data-driven influencer marketing, content production, and digital advertising campaigns across TikTok, Instagram, YouTube, Xiaohongshu, and WeChat.</p>
+                <p>Our exclusive roster of eight top-tier creators commands a combined reach exceeding 65 million followers, alongside partnerships with twenty additional industry talents spanning food, fashion, travel, and lifestyle verticals.</p>
+                <p>We deliver measurable business outcomes for global and domestic brands through strategic creator collaborations, advanced data analytics, and premium content production capabilities.</p>
+            </div>
+            <div class="team-card">
+                <h3>Peggy Gong</h3>
+                <div class="role">Head of Marketing</div>
+                <div class="divider"></div>
+                <p>Former marketing executive at Philips China and BeiTai Kitchen. Founded Qdor Communications in 2016, pioneering food influencer representation in China. Interviewed by China Cuisine Association for industry leadership. Drives DIAMIND MEDIA's cross-border marketing strategy and brand partnerships.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Creators -->
-<section id="creators" class="creators">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-label">Talent</p>
-      <h2 class="section-title">Exclusive Roster</h2>
-      <p class="section-desc">Eight signed creators and twenty long-term partners operating across Weibo, WeChat, Xiaohongshu, Douyin, and Bilibili.</p>
-    </div>
-    <div class="creator-grid">
-      <div class="creator-card">
-        <img src="images/kol-xiaobaojun.jpg" alt="Hi Xiaobaojun" class="creator-image">
-        <div class="creator-info">
-          <p class="creator-tag">Food &amp; Lifestyle</p>
-          <h3 class="creator-name">Hi Xiaobaojun</h3>
-          <p class="creator-handle">2.4M+ Weibo</p>
-          <p class="creator-desc">Celebrity chef and television personality. Brand ambassador for luxury hospitality and premium F&amp;B brands.</p>
+    <section id="talent">
+        <div class="section-header">
+            <div class="section-label">Exclusive Roster</div>
+            <h2 class="section-title">Our Creators</h2>
+            <p class="section-subtitle">Eight signed creators and twenty long-term partners operating across China's leading social platforms.</p>
         </div>
-      </div>
-      <div class="creator-card">
-        <img src="images/kol-wayne.jpg" alt="Wayne" class="creator-image">
-        <div class="creator-info">
-          <p class="creator-tag">Food &amp; Travel</p>
-          <h3 class="creator-name">Wayne</h3>
-          <p class="creator-handle">ZaoYangFanShu &middot; 1M+ WeChat</p>
-          <p class="creator-desc">Self-taught chef transforming everyday ingredients into extraordinary culinary experiences through visual storytelling.</p>
+        <div class="talent-grid">
+            <div class="talent-card">
+                <img src="images/image28.jpg" alt="Hi Xiaobaojun" class="talent-image">
+                <div class="talent-info">
+                    <div class="talent-category">Food & Lifestyle</div>
+                    <div class="talent-name">Hi Xiaobaojun</div>
+                    <div class="talent-platform">2.4M+ Weibo / Celebrity Chef</div>
+                </div>
+            </div>
+            <div class="talent-card">
+                <img src="images/image21.png" alt="Wayne" class="talent-image">
+                <div class="talent-info">
+                    <div class="talent-category">Food & Travel</div>
+                    <div class="talent-name">Wayne</div>
+                    <div class="talent-platform">ZaoYangFanShu / 1M+ WeChat</div>
+                </div>
+            </div>
+            <div class="talent-card">
+                <img src="images/image45.jpeg" alt="NaLu Diaries" class="talent-image">
+                <div class="talent-info">
+                    <div class="talent-category">Travel</div>
+                    <div class="talent-name">NaLu Diaries</div>
+                    <div class="talent-platform">1.66M+ Weibo</div>
+                </div>
+            </div>
+            <div class="talent-card">
+                <img src="images/image50.jpeg" alt="LengGao" class="talent-image">
+                <div class="talent-info">
+                    <div class="talent-category">Luxury Lifestyle</div>
+                    <div class="talent-name">LengGao</div>
+                    <div class="talent-platform">2M+ Weibo / Fashion Editor</div>
+                </div>
+            </div>
+            <div class="talent-card">
+                <img src="images/image54.jpeg" alt="Left Wind Horse" class="talent-image">
+                <div class="talent-info">
+                    <div class="talent-category">Film & Lifestyle</div>
+                    <div class="talent-name">Left Wind Horse</div>
+                    <div class="talent-platform">Director / Cannes Debut</div>
+                </div>
+            </div>
+            <div class="talent-card">
+                <img src="images/image68.jpeg" alt="MadahuiChi" class="talent-image">
+                <div class="talent-info">
+                    <div class="talent-category">Food Media</div>
+                    <div class="talent-name">MadahuiChi</div>
+                    <div class="talent-platform">What's Worth Eating / 1M+</div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="creator-card">
-        <img src="images/kol-nalu.jpg" alt="NaLu Diaries" class="creator-image">
-        <div class="creator-info">
-          <p class="creator-tag">Travel</p>
-          <h3 class="creator-name">NaLu Diaries</h3>
-          <p class="creator-handle">1.66M+ Weibo</p>
-          <p class="creator-desc">Top 10 Travel Influencer 2021. Documented 30+ countries in partnership with global tourism boards.</p>
-        </div>
-      </div>
-      <div class="creator-card">
-        <img src="images/kol-lenggao.jpg" alt="LengGao" class="creator-image">
-        <div class="creator-info">
-          <p class="creator-tag">Luxury Lifestyle</p>
-          <h3 class="creator-name">LengGao</h3>
-          <p class="creator-handle">2M+ Weibo &middot; 70K+ WeChat</p>
-          <p class="creator-desc">Eight years as fashion editor turned luxury lifestyle content creator with a distinctive visual aesthetic.</p>
-        </div>
-      </div>
-      <div class="creator-card">
-        <img src="images/kol-leftwind.jpg" alt="Left Wind Horse" class="creator-image">
-        <div class="creator-info">
-          <p class="creator-tag">Film &amp; Lifestyle</p>
-          <h3 class="creator-name">Left Wind Horse</h3>
-          <p class="creator-handle">Director</p>
-          <p class="creator-desc">Director and premium lifestyle creator. Cannes Film Festival debut. Produces cinematic brand content for luxury clients.</p>
-        </div>
-      </div>
-      <div class="creator-card">
-        <img src="images/kol-madahui.jpg" alt="MadahuiChi" class="creator-image">
-        <div class="creator-info">
-          <p class="creator-tag">Food Media</p>
-          <h3 class="creator-name">MadahuiChi</h3>
-          <p class="creator-handle">What&apos;s Worth Eating &middot; 1M+</p>
-          <p class="creator-desc">Head of China&apos;s leading food media platform. 400+ brand partnerships with consistent viral engagement.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Services -->
+    <section id="services">
+        <div class="section-header">
+            <div class="section-label">What We Do</div>
+            <h2 class="section-title">Full-Service Creator Economy</h2>
+            <p class="section-subtitle">End-to-end digital marketing solutions from strategy to execution.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-number">01</div>
+                <h3 class="service-title">Digital Advertising</h3>
+                <ul class="service-list">
+                    <li>Cross-platform media buying</li>
+                    <li>Programmatic advertising</li>
+                    <li>Performance marketing</li>
+                    <li>Retargeting & conversion</li>
+                    <li>Analytics & reporting</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <div class="service-number">02</div>
+                <h3 class="service-title">Influencer Marketing</h3>
+                <ul class="service-list">
+                    <li>KOL planning & strategy</li>
+                    <li>Creator matchmaking</li>
+                    <li>Campaign management</li>
+                    <li>Brand endorsement deals</li>
+                    <li>ROI tracking & optimization</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <div class="service-number">03</div>
+                <h3 class="service-title">Content Production</h3>
+                <ul class="service-list">
+                    <li>Video production & editing</li>
+                    <li>Food styling & photography</li>
+                    <li>Live streaming production</li>
+                    <li>Cinematic brand films</li>
+                    <li>Social media assets</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-label">Services</p>
-      <h2 class="section-title">Full-Service Creator Economy</h2>
+    <div class="quote-section">
+        <blockquote>"We brought together outstanding chefs and content creators to produce premium food content that elevated our brand positioning across digital channels."</blockquote>
+        <div class="quote-author">
+            <strong>Hennessy</strong>
+            Brand Marketing Director
+        </div>
     </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <p class="service-num">01</p>
-        <h3>Content Production</h3>
-        <ul>
-          <li>Food styling &amp; photography</li>
-          <li>Video production &amp; editing</li>
-          <li>Live streaming production</li>
-          <li>Custom digital assets</li>
-          <li>Interactive campaign design</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <p class="service-num">02</p>
-        <h3>Brand Strategy</h3>
-        <ul>
-          <li>Brand positioning &amp; identity</li>
-          <li>Campaign planning &amp; execution</li>
-          <li>VI system &amp; packaging design</li>
-          <li>Exhibition &amp; event design</li>
-          <li>Integrated communications</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <p class="service-num">03</p>
-        <h3>Talent Management</h3>
-        <ul>
-          <li>KOL planning &amp; marketing</li>
-          <li>TV &amp; media appearances</li>
-          <li>Brand endorsement deals</li>
-          <li>Book publishing support</li>
-          <li>Channel growth strategy</li>
-        </ul>
-      </div>
-    </div>
-    <div style="max-width:900px;margin:64px auto 0">
-      <img src="images/food-photography.png" alt="Food photography by DIAMIND MEDIA" style="width:100%;border-radius:8px;opacity:.9">
-    </div>
-  </div>
-</section>
 
-<!-- Testimonial -->
-<section style="padding:120px 0;background:#0d0d12">
-  <div class="container" style="max-width:800px;text-align:center">
-    <p class="section-label" style="margin-bottom:32px">Client Voice</p>
-    <p style="font-size:28px;color:#ccc;line-height:1.6;font-weight:300;letter-spacing:-0.01em">"We brought together outstanding chefs and content creators to produce premium food content that elevated our brand positioning across digital channels."</p>
-    <p style="margin-top:32px;font-size:14px;color:#666;text-transform:uppercase;letter-spacing:2px">— Hennessy, Brand Marketing Director</p>
-  </div>
-</section>
+    <section id="work">
+        <div class="section-header">
+            <div class="section-label">Portfolio</div>
+            <h2 class="section-title">Selected Work</h2>
+            <p class="section-subtitle">Campaign portfolio created with our exclusive talent roster for luxury and lifestyle brands.</p>
+        </div>
+        <div class="work-grid">
+            <div class="work-item">
+                <img src="images/image80.jpg" alt="The Macallan / Carlsberg Campaign">
+                <div class="work-overlay">
+                    <div class="work-category">Brand Campaign</div>
+                    <div class="work-title">The Macallan / Carlsberg</div>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="images/image81.jpg" alt="Edition / Lux / Waldorf-Astoria">
+                <div class="work-overlay">
+                    <div class="work-category">Hospitality Campaign</div>
+                    <div class="work-title">Edition / Lux / Waldorf-Astoria</div>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="images/image82.jpg" alt="Remy Martin / Crystal / Boss">
+                <div class="work-overlay">
+                    <div class="work-category">Luxury / Film</div>
+                    <div class="work-title">Remy Martin / Crystal / Boss</div>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="images/image83.jpg" alt="Wyeth / Joya / Blossom Hill">
+                <div class="work-overlay">
+                    <div class="work-category">Commercial Production</div>
+                    <div class="work-title">Wyeth / Joya / Blossom Hill</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Video Work -->
-<section id="work" class="video-section">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-label">Selected Work</p>
-      <h2 class="section-title">Campaign Portfolio</h2>
-      <p class="section-desc">Video productions and brand campaigns created with our exclusive talent roster.</p>
-    </div>
-    <div class="video-grid">
-      <div class="video-card">
-        <img src="images/creator-brand-work.jpg" alt="Brand Campaign">
-        <div class="video-overlay">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
+    <section>
+        <div class="section-header">
+            <div class="section-label">Partners</div>
+            <h2 class="section-title">Brand Partners</h2>
+            <p class="section-subtitle">Long-term partnerships across F&B, luxury, technology, automotive, and tourism sectors.</p>
         </div>
-        <div class="video-title">
-          <h4>Remy Martin Mid-Autumn Festival</h4>
-          <p>Brand Campaign / Video Production</p>
+        <div class="clients-grid">
+            <div class="client-item">Hennessy</div>
+            <div class="client-item">Remy Martin</div>
+            <div class="client-item">McDonald's</div>
+            <div class="client-item">KFC</div>
+            <div class="client-item">Starbucks</div>
+            <div class="client-item">Nestle</div>
+            <div class="client-item">Coca-Cola</div>
+            <div class="client-item">Budweiser</div>
+            <div class="client-item">Godiva</div>
+            <div class="client-item">Philips</div>
+            <div class="client-item">Siemens</div>
+            <div class="client-item">Miele</div>
+            <div class="client-item">KitchenAid</div>
+            <div class="client-item">BOSS</div>
+            <div class="client-item">Burberry</div>
+            <div class="client-item">Nike</div>
+            <div class="client-item">Adidas</div>
+            <div class="client-item">Puma</div>
+            <div class="client-item">Huawei</div>
+            <div class="client-item">Mercedes</div>
+            <div class="client-item">BMW</div>
+            <div class="client-item">Airbnb</div>
+            <div class="client-item">Google</div>
+            <div class="client-item">Alibaba</div>
+            <div class="client-item">Michelin</div>
+            <div class="client-item">Tourism Australia</div>
+            <div class="client-item">Dubai Tourism</div>
+            <div class="client-item">Canada Goose</div>
+            <div class="client-item">Meituan</div>
+            <div class="client-item">The Macallan</div>
         </div>
-      </div>
-      <div class="video-card">
-        <img src="images/director-portfolio.jpg" alt="Director Portfolio">
-        <div class="video-overlay">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="video-title">
-          <h4>Directorial Portfolio</h4>
-          <p>Cinematic Brand Content</p>
-        </div>
-      </div>
-      <div class="video-card">
-        <img src="images/food-content.png" alt="Food Content">
-        <div class="video-overlay">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="video-title">
-          <h4>Food &amp; Travel Content</h4>
-          <p>Content Production</p>
-        </div>
-      </div>
-      <div class="video-card">
-        <img src="images/event-appearance.jpg" alt="Event">
-        <div class="video-overlay">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="video-title">
-          <h4>Live Events &amp; Activations</h4>
-          <p>Experiential Marketing</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Brands -->
-<section id="brands" class="brands">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-label">Clients</p>
-      <h2 class="section-title">Brand Partners</h2>
-      <p class="section-desc">Long-term partnerships across F&amp;B, luxury, technology, automotive, and tourism sectors.</p>
-    </div>
-    <div class="brand-grid">
-      <div class="brand-item">Hennessy</div>
-      <div class="brand-item">Remy Martin</div>
-      <div class="brand-item">McDonald&apos;s</div>
-      <div class="brand-item">KFC</div>
-      <div class="brand-item">Starbucks</div>
-      <div class="brand-item">Nestle</div>
-      <div class="brand-item">Coca-Cola</div>
-      <div class="brand-item">Budweiser</div>
-      <div class="brand-item">Godiva</div>
-      <div class="brand-item">Philips</div>
-      <div class="brand-item">Siemens</div>
-      <div class="brand-item">Miele</div>
-      <div class="brand-item">KitchenAid</div>
-      <div class="brand-item">BOSS</div>
-      <div class="brand-item">Burberry</div>
-      <div class="brand-item">Nike</div>
-      <div class="brand-item">Adidas</div>
-      <div class="brand-item">Puma</div>
-      <div class="brand-item">Huawei</div>
-      <div class="brand-item">Mercedes</div>
-      <div class="brand-item">BMW</div>
-      <div class="brand-item">Airbnb</div>
-      <div class="brand-item">Google</div>
-      <div class="brand-item">Alibaba</div>
-      <div class="brand-item">Michelin</div>
-      <div class="brand-item">Tourism Australia</div>
-      <div class="brand-item">Dubai Tourism</div>
-      <div class="brand-item">Canada Goose</div>
-      <div class="brand-item">Meituan</div>
-    </div>
-  </div>
-</section>
+    <section id="contact">
+        <div class="section-header">
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">Start a Conversation</h2>
+            <p class="section-subtitle">Ready to amplify your brand through China's most influential creators? We work with select partners on impactful campaigns.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <div class="label">Contact</div>
+                    <div class="value">Peggy Gong, Head of Marketing</div>
+                </div>
+                <div class="contact-item">
+                    <div class="label">Phone</div>
+                    <div class="value"><a href="tel:+15168638788">+1 516 863 8788</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="label">Email</div>
+                    <div class="value"><a href="mailto:Peggy.G@diamindmedia.com">Peggy.G@diamindmedia.com</a></div>
+                </div>
+                <div class="offices">
+                    <div class="office-card">
+                        <h4>New York</h4>
+                        <p>19 Friendly Ln<br>Jericho, NY 11753<br>United States</p>
+                    </div>
+                    <div class="office-card">
+                        <h4>Shanghai</h4>
+                        <p>54-420 Suzhou<br>East Chuan Sha Road<br>Shanghai, China</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="images/image89.jpeg" alt="Production" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; border: 1px solid var(--border);">
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 12px; text-align: center;">Behind the scenes at our Shanghai production studio</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2>Start a Conversation</h2>
-        <p>Ready to amplify your brand through China's most influential creators? We work with select partners on impactful campaigns.</p>
-        <div class="contact-detail">
-          <p class="label">Offices</p>
-          <p class="value">Shanghai / New York</p>
-        </div>
-        <div class="contact-detail">
-          <p class="label">Contact</p>
-          <p class="value">Peggy Gong, Managing Director</p>
-        </div>
-        <div class="contact-detail">
-          <p class="label">Phone</p>
-          <p class="value">+1 516 863 8788</p>
-        </div>
-        <div class="contact-detail">
-          <p class="label">Email</p>
-          <p class="value"><a href="mailto:Peggy.G@diamindmedia.com">Peggy.G@diamindmedia.com</a></p>
-        </div>
-      </div>
-      <div>
-        <img src="images/creators-showcase.jpg" alt="DIAMIND MEDIA" style="width:100%;border-radius:4px;opacity:.7">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="container footer-content">
-    <p class="footer-brand">DIAMIND <span>MEDIA</span></p>
-    <p class="footer-copy">Shanghai &middot; Est. 2017 &middot; All rights reserved</p>
-  </div>
-</footer>
-
-<script>
-// Nav scroll effect
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)
-})
-</script>
+    <footer>
+        <p>DIAMIND MEDIA INC / New York / Shanghai / Est. 2017 / All rights reserved</p>
+    </footer>
 
 </body>
 </html>
